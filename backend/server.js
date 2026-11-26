@@ -18,6 +18,10 @@ app.use(express.json());
 // Connect to MongoDB;
 connectDB();
 
+app.get("/", (req, res) => {
+  res.send("Dustbin Finder Backend is Running!");
+});
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/dustbins", dustbinRoutes);
