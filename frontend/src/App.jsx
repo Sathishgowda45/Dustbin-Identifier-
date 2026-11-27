@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 const MAPS_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 /* ============================================================
