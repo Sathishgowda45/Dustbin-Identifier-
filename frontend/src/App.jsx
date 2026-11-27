@@ -313,7 +313,8 @@ function UserLoginSlide({ setUser, setPage, goToSlide }) {
         setError(data.message || "Login failed");
       }
     } catch (err) {
-      setError("Cannot connect to server. Please try again.");
+      console.error("Login fetch error:", err, "API:", API);
+      setError(`Cannot connect to server (${API}). Please try again.`);
     }
     setLoading(false);
   };
@@ -381,7 +382,8 @@ function AdminLoginSlide({ setUser, setPage }) {
         setError(data.message || "Login failed");
       }
     } catch (err) {
-      setError("Cannot connect to server. Please try again.");
+      console.error("Login fetch error:", err, "API:", API);
+      setError(`Cannot connect to server (${API}). Please try again.`);
     }
     setLoading(false);
   };
@@ -443,7 +445,8 @@ function RegisterSlide({ goToSlide }) {
         setError(data.message || "Failed to send verification code");
       }
     } catch (err) {
-      setError("Cannot connect to server. Please try again.");
+      console.error("Login fetch error:", err, "API:", API);
+      setError(`Cannot connect to server (${API}). Please try again.`);
     }
     setLoading(false);
   };
