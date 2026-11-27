@@ -1301,7 +1301,10 @@ function App() {
                   <p className="user-role">{user.role === "admin" ? "🛡️ Admin" : "👤 User"}</p>
                 </div>
               </div>
-              <button className="btn btn-danger btn-small" onClick={logout}>🚪 Logout</button>
+              <button className="btn btn-danger btn-small logout-btn" onClick={logout} title="Logout" aria-label="Logout">
+                <span>🚪</span>
+                <span className="logout-text">Logout</span>
+              </button>
             </div>
           </aside>
 
